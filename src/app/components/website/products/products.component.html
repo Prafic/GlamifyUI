@@ -1,0 +1,21 @@
+
+<section class="product">
+    <h2 class="product-category">Products</h2>
+   
+    <div class="product-container" >
+        <div class="product-card" *ngFor="let product of productList">
+            <div class="product-image">
+
+                <!-- <span class="discount-tag">50% off</span> -->
+                <img [src]="product.imageUrl" class="product-thumb" alt="">
+                <button class="card-btn" [routerLink]="['/productDetails',product.productId]">view</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">{{product.productName}}</h2>
+                <p class="product-short-des">{{product.description}}</p>
+                <span class="price">Rs. {{product.price}}</span><span class="actual-price">$40</span>
+            </div>
+        </div>
+    
+    </div>
+</section>

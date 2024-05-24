@@ -1,0 +1,231 @@
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">{{user?.role}}</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- <ng-container *ngIf="user !== undefined;else loggedIn">
+    <button (click)="onLogout()">Logout {{user?.role}}</button>
+  </ng-container> -->
+  <!-- <ng-container *ngIf="user == undefined;else loggedIn">
+    <a [routerLink]="['login']">Login</a>
+  </ng-container> 
+  <ng-template #loggedIn>
+    <div>User logout {{$user}}</div>
+    <div>Auth logout {{auth?.role}}</div>
+  </ng-template> -->
+
+
+ 
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+      <img src="/assets/img/logo.png" class="brand-logo" alt="logo" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/login']">Login</a>
+              </li>
+              <div class="nav-item">
+                  <input type="text" [(ngModel)]="searchString" class="search-box" placeholder="search brand, product">
+                  <button class="search-btn" (click)="searchProducts()">search</button>
+              </div>
+              </ul>
+            </div>
+      <ng-template>
+          <div [ngSwitch]="user?.role">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent2" *ngSwitchCase="'Admin'">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" [routerLink]="['/admin/product']">Products</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" [routerLink]="['/admin/category']">Categories</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" [routerLink]="['/admin/customers']">Customers</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" [routerLink]="['/admin/category']">All Orders</a>
+                      </li>
+                      <div class="nav-item">
+                          <input type="text" [(ngModel)]="searchString" class="search-box" placeholder="search brand, product">
+                          <button class="search-btn" (click)="searchProducts()">search</button>
+                      </div>
+                      
+                      
+                  </ul>
+                  <div class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle me-2" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                         Profile
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                          <li><button (click)="onLogout()" class="dropdown-item">Logout</button></li>
+      
+                      </ul>
+                  </div>
+      
+              </div>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent3" *ngSwitchCase="'Customer'">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" aria-current="page" [routerLink]="['/']">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" [routerLink]="['/product']">Products</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" [routerLink]="['/cart']">Cart</a>
+                      </li>
+                      <div class="nav-item">
+                          <input type="text" class="search-box" [(ngModel)]="searchString" placeholder="search brand, product">
+                          <button class="search-btn" (click)="searchProducts()">search</button>
+                      </div>
+                      
+      
+                  </ul>
+                  <div class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle me-2" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Profile
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                          <li><button (click)="onLogout()" class="dropdown-item">Logout</button></li>
+      
+                      </ul>
+                  </div>
+      
+              </div>
+          </div>
+      </ng-template>
+     
+      
+  </div>
+</nav>   -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxWH6KxlKClDl5HlkPpis2-w4CGJmbxmEnzMr1dtM2LA&s" class="brand-logo" alt="logo" />
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ng-container *ngIf="user == undefined">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['login']">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['register']">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['product']">Products</a>
+        </li>
+      </ul>
+    </ng-container>
+    <ng-container *ngIf="user != undefined && user?.role === 'Customer' ">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/product']">Products</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/cart']">Cart</a>
+        </li>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" [routerLink]="['order_items']">My Orders</a></li>
+            <li><a class="logout dropdown-item" (click)="onLogout()">Logout</a></li>
+           
+          </ul>
+        </div>
+        
+      </ul>
+      
+    </ng-container>
+    <ng-container *ngIf="user != undefined && user?.role === 'Admin' ">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/admin/products']">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/admin/category']">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/admin/customers']">Customers</a>
+        </li>
+        
+        
+      </ul>
+      <div class="nav-item dropdown bg-light">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Profile
+        </a>
+        <ul class="dropdown-menu">
+          
+          <a class="logout dropdown-item" (click)="onLogout()">Logout</a>
+          
+        </ul>
+      </div>
+    </ng-container>
+    <div class="nav-item text-center">
+      <input type="text" [(ngModel)]="searchString" class="search-box" placeholder="search brand, product">
+      <button class="search-btn" (click)="searchProducts()">search</button>
+   </div>
+    </div>
+  </div>
+</nav>
+
+
+<ul class="links-container" >
+    <li class="link-item" *ngFor="let cat of categoryList"><a [routerLink]="['/category/products',cat.categoryId]" class="link">{{cat.categoryName}}</a></li>
+</ul>

@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fluid img {
+    border-radius: 5px;
+    margin: 5px;
+}
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5;
+    z-index: 9;
+}
+.brand-logo{
+    height: 50px;
+    mix-blend-mode: multiply;
+}
+
+.nav{
+    padding: 10px 10vw;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-item :hover {
+    background-color: black;
+    padding: 10px;
+    color: #fff;
+}
+.dropdown-item{
+    padding: 3px;
+    text-align: center;
+    margin-right: 0px;
+}
+
+.search-box{
+    /* width: 80%; */
+    height: 40px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #d1d1d1;
+    text-transform: capitalize;
+    background: none;
+    color: #a9a9a9;
+    outline: none;
+}
+.logout{
+    cursor: pointer;
+}
+.search-btn{
+    /* width: 20%; */
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #383838;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 13px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-box::placeholder{
+    color: #a9a9a9;
+}
+
+.nav-item a{
+    margin-left: 20px;
+    
+}
+
+.nav-item a img{
+    width: 30px;
+}
+
+/* ------------------------------------------------------------------- */
+
+.links-container{
+    width: 100%;
+    display: flex;
+    padding: 10px 10vw;
+    justify-content: center;
+    list-style: none;
+    border-top: 1px solid #d1d1d1;
+    background-color: rgb(18, 151, 76); 
+    margin: 5px 0;
+    
+    
+
+}
+.link{
+    text-transform: capitalize;
+    padding: 0 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    
+    transition: .5s;
+    color: #ffffff;
+     
+}
+
+.dropdown-menu:hover {
+background-color: white !important;
+padding: 0 !important;
+}
+
+.dropdown-item {
+    background-color: #fff;
+}
+
+.link:hover{
+    opacity: 0.8;
+}
+
+/* ----------------------------------------------------------------------- */

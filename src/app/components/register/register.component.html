@@ -1,0 +1,46 @@
+<div class="center">
+    <h1> Register</h1>
+    <form method="post">
+
+        <div class="txt_field">
+            <input type="text" name="name" [(ngModel)]="signupObj.name" required>
+            <span> </span>
+            <label>Full Name</label>
+        </div>
+
+        <div class="txt_field">
+            <input type="email" name="email" [(ngModel)]="signupObj.email" required>
+            <span> </span>
+            <label>Email Address</label>
+        </div>
+
+        <div class="txt_field">
+            <input type="text" name="phoneNumber" [(ngModel)]="signupObj.phoneNumber" required>
+            <span> </span>
+            <label>Phone Number</label>
+        </div>
+
+        <div class="txt_field">
+            <input type="password" name="password" [(ngModel)]="signupObj.password" required>
+            <span> </span>
+            <label>Password</label>
+        </div>
+
+
+        <div class="txt_field">
+            <input type="password" name="confirmPassword" [(ngModel)]="signupObj.confirmPassword" required>
+            <span> </span>
+            <label>Confirm Password </label>
+        </div>
+
+        <div class="txt_field">
+            <input type="text" name="address" [(ngModel)]="signupObj.address" required>
+            <span> </span>
+            <label>Address</label>
+        </div>
+
+       
+        <button type="submit" (click)="onSubmit()" value="Register">Register</button>
+        <div class="users_signup">
+           I have already account <a routerLink="/login">Login here</a>
+        </div>

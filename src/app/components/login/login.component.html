@@ -1,0 +1,23 @@
+
+<div class = "center">
+    <h1> Hello, Welcome Back !</h1>
+    <form>
+    
+    <div class="txt_field">
+    <input type="text" [(ngModel)]="loginObj.email" name="email" required>
+    <span> </span>
+    <label>Email Address </label>
+    </div>
+    
+    <div class="txt_field">
+    <input type="password" [(ngModel)]="loginObj.password" name="password" required>
+    <span> </span>
+    <label> Password </label>
+    </div>
+    
+    
+    <button type="submit" value="Login" (click)="onLogin()">Login</button>
+    <!-- <div class="forgot"> Forgot Password </div> -->
+    <div class="users_signup">
+    Don't have an account? <a routerLink="/register">SignUp</a>
+    </div>
